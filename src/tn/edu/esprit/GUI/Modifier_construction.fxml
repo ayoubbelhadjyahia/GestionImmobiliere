@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.Modifier_constructionController">
+   <children>
+      <Pane prefHeight="498.0" prefWidth="431.0" styleClass="ajoutDossier" stylesheets="@construction.css">
+         <children>
+            <Label fx:id="modification_tesssssst" layoutX="29.0" layoutY="79.0" prefHeight="40.0" prefWidth="132.0" text="Date de creation" textFill="#f0b90b" />
+            <Label layoutX="29.0" layoutY="146.0" prefHeight="40.0" prefWidth="132.0" text="Terrain" textFill="#f0b90b" />
+            <Label layoutX="29.0" layoutY="229.0" prefHeight="40.0" prefWidth="132.0" text="Nom client" textFill="#f0b90b" />
+            <Label layoutX="29.0" layoutY="307.0" prefHeight="40.0" prefWidth="132.0" text="Matiere premier" textFill="#f0b90b" />
+            <TextField fx:id="id_date_dossier_const_modi" layoutX="201.0" layoutY="84.0" />
+            <TextField fx:id="id_terrain_const_modi" layoutX="201.0" layoutY="151.0" />
+            <TextField fx:id="id_client_const_modi" layoutX="201.0" layoutY="234.0" />
+            <TextField fx:id="id_matiere_prem_const_modi" layoutX="201.0" layoutY="312.0" />
+            <Button fx:id="modifier_dossier_modifier" layoutX="218.0" layoutY="393.0" mnemonicParsing="false" onAction="#Mod_doss_modifi_act" prefHeight="31.0" prefWidth="153.0" styleClass="supprimer_dossier" text="Modifier" />
+            <Button fx:id="annuler_modification" layoutX="23.0" layoutY="393.0" mnemonicParsing="false" onAction="#annuler_mod_act" styleClass="supprimer_dossier" text="Annuler" />
+            <Label fx:id="err_date_de_creation_mod" layoutX="201.0" layoutY="119.0" prefHeight="21.0" prefWidth="186.0" text="erreur Date" textFill="RED" />
+            <Label fx:id="err_terrain_mod1" layoutX="201.0" layoutY="194.0" prefHeight="21.0" prefWidth="186.0" text="erreur Terrain" textFill="RED" />
+            <Label fx:id="err_nom_client_mod11" layoutX="201.0" layoutY="275.0" prefHeight="21.0" prefWidth="186.0" text="erreur Terrain" textFill="RED" />
+            <Label fx:id="err_Materiel_prem_mod111" layoutX="201.0" layoutY="357.0" prefHeight="21.0" prefWidth="186.0" text="erreur Matiere premier" textFill="RED" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

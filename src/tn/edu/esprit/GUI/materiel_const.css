@@ -1,0 +1,10 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.supprimer_dossier{
+    -fx-background-color:#f0b90b;
+}
+.ajoutDossier{
+    -fx-background-color:#2b3139;
+}

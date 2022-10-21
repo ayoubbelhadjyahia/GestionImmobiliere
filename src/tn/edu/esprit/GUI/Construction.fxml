@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="936.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.ConstructionController">
+    <stylesheets>
+        <URL value="@construction.css" />
+    </stylesheets>
+   <children>
+      <Pane fx:id="paneCons" layoutY="-6.0" prefHeight="705.0" prefWidth="1097.0" styleClass="ajoutDossier">
+         <children>
+            <Pane layoutY="119.0" prefHeight="2.0" prefWidth="1097.0" style="-fx-background-color: black;" />
+            <Button fx:id="ajoutDossier" layoutX="135.0" layoutY="490.0" mnemonicParsing="false" onAction="#ajouter_Doss" prefHeight="31.0" prefWidth="108.0" styleClass="supprimer_dossier" text="Ajouter" />
+            <Label fx:id="nom_client_aff_css" layoutX="10.0" layoutY="326.0" prefHeight="31.0" prefWidth="83.0" text="Nom client" textFill="#f0b90b" />
+            <Label fx:id="terrain_const_aff_css" layoutX="10.0" layoutY="258.0" prefHeight="31.0" prefWidth="83.0" text="Terrain" textFill="#f0b90b" />
+            <ComboBox fx:id="id_client_const" layoutX="143.0" layoutY="326.0" prefHeight="31.0" prefWidth="217.0" />
+            <ComboBox fx:id="id_terrain_const" layoutX="144.0" layoutY="258.0" prefHeight="31.0" prefWidth="217.0" />
+            <DatePicker fx:id="id_date_dossier_const" layoutX="143.0" layoutY="195.0" prefHeight="31.0" prefWidth="217.0" styleClass="ajoutDossier" />
+            <Label fx:id="date_aff_css" layoutX="10.0" layoutY="195.0" prefHeight="31.0" prefWidth="125.0" styleClass="nom_client_aff_css" stylesheets="@../../../../../build/classes/tn/edu/esprit/GUI/construction.css" text="Date de creation" textFill="#f0b90b" />
+            <Label fx:id="matiere_prem_aff_css" layoutX="14.0" layoutY="393.0" prefHeight="31.0" prefWidth="125.0" text="Matiere premiare" textFill="#f0b90b" />
+            <ComboBox fx:id="id_matiere_prem_const" layoutX="143.0" layoutY="393.0" prefHeight="31.0" prefWidth="217.0" />
+            <TableView fx:id="tableau_Dossier" layoutX="568.0" layoutY="190.0" prefHeight="423.0" prefWidth="522.0" styleClass="ajoutDossier">
+              <columns>
+                <TableColumn fx:id="date_creation_t" prefWidth="137.0" text="Date de creation" />
+                <TableColumn fx:id="terrain_t" prefWidth="119.0" text="Terrain" />
+                  <TableColumn fx:id="nom_client_t" minWidth="9.0" prefWidth="102.0" text="Nom clien" />
+                  <TableColumn fx:id="matiriel_p_t" prefWidth="163.0" text="Matiere premiare" />
+              </columns>
+            </TableView>
+            <TextField fx:id="rech_doss_t" layoutX="735.0" layoutY="138.0" prefHeight="31.0" prefWidth="285.0" />
+            <Button fx:id="supprimer_dossier" layoutX="441.0" layoutY="490.0" mnemonicParsing="false" onAction="#supprimer_doss_t" prefHeight="31.0" prefWidth="108.0" styleClass="supprimer_dossier" text="Supprimer" />
+            <Label fx:id="recherche_const_css" layoutX="549.0" layoutY="143.0" prefHeight="21.0" prefWidth="95.0" stylesheets="@../../../../../build/classes/tn/edu/esprit/GUI/construction.css" text="Rechercher" textFill="#f0b90b" />
+            <Label fx:id="err_dat" layoutX="378.0" layoutY="200.0" prefHeight="21.0" prefWidth="108.0" text="Erreur Date" textFill="#fc0000" />
+            <Label fx:id="err_terr" layoutX="377.0" layoutY="259.0" prefHeight="21.0" prefWidth="108.0" text="Erreur terrain" textFill="#fc0000" />
+            <Label fx:id="err_cliet" layoutX="377.0" layoutY="331.0" prefHeight="21.0" prefWidth="108.0" text="Erreur client" textFill="#fc0000" />
+            <Label fx:id="err_mat" layoutX="377.0" layoutY="398.0" prefHeight="21.0" prefWidth="108.0" text="Erreur Matier" textFill="#fc0000" />
+            <Button fx:id="modifier_dossier_page" layoutX="922.0" layoutY="638.0" mnemonicParsing="false" onAction="#modifier_doss__page" text="Modifier" />
+            <Button layoutX="74.0" layoutY="26.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="355.0" styleClass="supprimer_dossier" text="Dosssier" />
+            <Button fx:id="Materiel_dossier_home" layoutX="600.0" layoutY="26.0" mnemonicParsing="false" onAction="#Materiel_dossier_home_act" prefHeight="70.0" prefWidth="404.0" styleClass="supprimer_dossier" text="Materiel" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="178.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/jackhanmer-construction-worker.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
